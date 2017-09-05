@@ -1,0 +1,72 @@
+.ad-box {
+  display: grid;
+  width: 100%;
+  max-width:1200px;
+  padding-top: 50px;
+  list-style-type: none;
+  text-decoration: none;
+  
+  grid-template-columns: repeat(1fr);
+}
+
+.ad-card {
+  max-width: 1200px;
+  min-height: 675px;
+
+  background-color: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition:transform .1s ease-in;
+  
+  display:flex;
+  flex-direction:column;
+}
+
+.ad-card:hover {
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,.16);
+  transform:scale(1.025);
+}
+.ad__image-box {
+  max-width: 1200px;
+  max-height: 675px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.ad__image {
+  max-width: 1200px;
+  max-height: 675px;
+  object-fit: cover;
+}
+
+.ad__header {
+  display: flex;
+  font-size: 19px;
+  padding-top: 1rem;
+  margin:0;
+}
+
+.ad__content {
+  padding: 2rem;
+  display:flex;
+  flex-direction:column;
+  flex:1 1 auto;
+}
+
+.ad__title {
+  flex:1 1 auto;
+  align-self: flex-start;
+}
+
+.ad__price {
+  flex:1 1 auto;
+  align-self: flex-end;
+  text-align: right;
+  
+}
+
+.ad__description {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
