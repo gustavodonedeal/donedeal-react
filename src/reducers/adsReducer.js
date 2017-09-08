@@ -1,5 +1,5 @@
-import * as types from '../actions/actionTypes';
-import initialState from './initialState';
+import * as types from "../actions/actionTypes";
+import initialState from "./initialState";
 
 export default function adReducer(state = initialState.ads, action) {
   switch (action.type) {

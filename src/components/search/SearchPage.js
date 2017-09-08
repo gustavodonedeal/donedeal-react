@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as adActions from '../../actions/adActions';
+import React, { PropTypes } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as adActions from "../../actions/adActions";
 
-import SearchList from './SearchList';
-import './search.css';
+import SearchList from "./SearchList";
+import "./search.css";
 
 class SearchPage extends React.Component {
   constructor(props, context) {
@@ -28,7 +28,7 @@ class SearchPage extends React.Component {
     return (
       <div>
         <h1>Search Page</h1>
-        <a className="refresh-list" onClick={(e) => this.refreshList(e)}>
+        <a className="refresh-list" onClick={e => this.refreshList(e)}>
           Refresh List
         </a>
         <SearchList ads={this.props.ads} />

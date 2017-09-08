@@ -1,7 +1,7 @@
-import {combineReducers} from 'redux';
-import ads from './adsReducer';
-import ad from './adReducer';
-import ajaxCallsInProgress from './ajaxStatusReducer';
+import { combineReducers } from "redux";
+import ads from "./adsReducer";
+import ad from "./adReducer";
+import ajaxCallsInProgress from "./ajaxStatusReducer";
 
 const rootReducer = combineReducers({
   ads,

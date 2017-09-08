@@ -1,18 +1,25 @@
 /* es-lint off */
-import { CORS, DONE_DEAL_API_BASE_V3, DONE_DEAL_API_BASE_V4 } from './consts';
-import { getRequestParams, postRequestParams } from './request';
+import { CORS, DONE_DEAL_API_BASE_V3, DONE_DEAL_API_BASE_V4 } from "./consts";
+import { getRequestParams, postRequestParams } from "./request";
 
 const searchParams = (section, filter = {}) =>
-  Object.assign({}, {
-    adType: 'forsale',
-    max: 30,
-    section,
-    sort: 'relevance desc'
-  }, filter);
+  Object.assign(
+    {},
+    {
+      adType: "forsale",
+      max: 30,
+      section,
+      sort: "relevance desc"
+    },
+    filter
+  );
 
 const getAds = (section, filter) => {
   const params = searchParams(section, filter);
-  return fetch(`${CORS + DONE_DEAL_API_BASE_V4}/find/`, postRequestParams(params))
+  return fetch(
+    `${CORS + DONE_DEAL_API_BASE_V4}/find/`,
+    postRequestParams(params)
+  )
     .then(response => response.json())
     .then(data => data.ads)
     .catch(error => error);
@@ -24,7 +31,10 @@ const getAd = adId =>
     .catch(error => error);
 
 const getSellersPhoneNumber = adId =>
-  fetch(`${CORS + DONE_DEAL_API_BASE_V3}/view/ad/${adId}/phone`, postRequestParams())
+  fetch(
+    `${CORS + DONE_DEAL_API_BASE_V3}/view/ad/${adId}/phone`,
+    postRequestParams()
+  )
     .then(response => response.json())
     .then(data => data.phone)
     .catch(error => error);
